@@ -1,0 +1,13 @@
+{
+  "name": "MDN VS-Code Theme",
+  "description": "Styles MDN code blocks like the default vscode theme.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*", "https://interactive-examples.mdn.mozilla.net/*"],
+      "css": ["styles.css"],
+      "all_frames": true
+    }
+  ]
+}
