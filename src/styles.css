@@ -50,6 +50,11 @@
   --code-background-block: var(--code-background) !important;
 }
 
+.CodeMirror-selected,
+.CodeMirror-line *::selection {
+  background: var(--selected-background) !important;
+}
+
 :root .dark,
 :root .theme-dark {
   --code-token-tag: #569cd6 !important;
@@ -66,6 +71,7 @@
   --code-token-default: #d4d4d4 !important;
   --code-token-punctuation: var(--code-token-default) !important;
   --code-background: #1e1e1e !important;
+  --selected-background: #3a4f77 !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,6 +90,7 @@
     --code-token-default: #d4d4d4 !important;
     --code-token-punctuation: var(--code-token-default) !important;
     --code-background: #1e1e1e !important;
+    --selected-background: #3a4f77 !important;
   }
 }
 
@@ -115,6 +122,7 @@
   --code-token-default: #000000 !important;
   --code-token-punctuation: var(--code-token-default) !important;
   --code-background: #f6f6f6 !important;
+  --selected-background: #bdd5fd !important;
 }
 
 @media (prefers-color-scheme: light) {
@@ -133,6 +141,7 @@
     --code-token-default: #000000 !important;
     --code-token-punctuation: var(--code-token-default) !important;
     --code-background: #f6f6f6 !important;
+    --selected-background: #bdd5fd !important;
   }
 }
 
