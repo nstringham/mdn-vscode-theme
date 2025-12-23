@@ -146,5 +146,5 @@
 }
 
 :root {
-  --font-code: "Cascadia Code", "Cascadia Mono", Consolas, Menlo, Monaco, Liberation Mono, Lucida Console, monospace !important;
+  --font-family-code: "Cascadia Code", "Cascadia Mono", "JetBrains Mono", monospace !important;
 }
