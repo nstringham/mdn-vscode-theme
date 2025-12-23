@@ -1,3 +1,24 @@
+.token.keyword,
+.token.tag,
+.token.doctype-tag,
+.token.interpolation-punctuation,
+.token.regex-flags,
+.token.boolean,
+.cm-atom {
+  color: var(--code-token-keyword) !important;
+}
+
+.token.rule {
+  color: var(--code-token-control) !important;
+}
+
+.token.attr-name,
+.token.property,
+.cm-variable,
+.cm-def {
+  color: var(--code-token-attribute-name) !important;
+}
+
 .token.function {
   color: var(--code-token-function-name) !important;
 }
@@ -6,9 +27,15 @@
   color: var(--code-token-class-name) !important;
 }
 
-.token.template-string > .token.string,
-.token.attr-value > .punctuation:not(.attr-equals) {
-  color: var(--code-token-attribute-value) !important;
+.token.string,
+.token.attr-value,
+.token.attr-value > :not(.attr-equals) {
+  color: var(--code-token-string) !important;
+}
+
+.token.constant,
+.token.builtin {
+  color: var(--code-token-constant) !important;
 }
 
 .token.number,
@@ -20,27 +47,21 @@
   color: var(--code-token-regex) !important;
 }
 
-.token.constant {
-  color: var(--code-token-constant) !important;
+.token.comment {
+  color: var(--code-token-comment) !important;
 }
 
-.token.name,
-.cm-variable,
-.cm-def {
-  color: var(--code-token-attribute-name) !important;
+.token.selector {
+  color: var(--code-token-selector) !important;
 }
 
-.token.tag,
-.token.doctype-tag,
-.token.interpolation-punctuation,
-.token.regex-flags,
-.token.boolean,
-.cm-atom {
-  color: var(--code-token-tag) !important;
+.token.punctuation,
+.token.operator {
+  color: var(--code-token-punctuation) !important;
 }
 
-.token.rule {
-  color: var(--code-token-control) !important;
+.token.atrule {
+  color: var(--code-token-default) !important;
 }
 
 .category-css,
@@ -57,12 +78,12 @@
 
 :root .dark,
 :root .theme-dark {
-  --code-token-tag: #569cd6 !important;
+  --code-token-keyword: #569cd6 !important;
   --code-token-control: #c586c0 !important;
   --code-token-attribute-name: #9cdcfe !important;
   --code-token-function-name: #dcdcaa !important;
   --code-token-class-name: #4ec9b0 !important;
-  --code-token-attribute-value: #ce9178 !important;
+  --code-token-string: #ce9178 !important;
   --code-token-constant: #4fc1ff !important;
   --code-token-number: #b5cea8 !important;
   --code-token-regex: #d16969 !important;
@@ -76,12 +97,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --code-token-tag: #569cd6 !important;
+    --code-token-keyword: #569cd6 !important;
     --code-token-control: #c586c0 !important;
     --code-token-attribute-name: #9cdcfe !important;
     --code-token-function-name: #dcdcaa !important;
     --code-token-class-name: #4ec9b0 !important;
-    --code-token-attribute-value: #ce9178 !important;
+    --code-token-string: #ce9178 !important;
     --code-token-constant: #4fc1ff !important;
     --code-token-number: #b5cea8 !important;
     --code-token-regex: #d16969 !important;
@@ -108,12 +129,12 @@
 
 :root .light,
 :root .theme-light {
-  --code-token-tag: #0000ff !important;
+  --code-token-keyword: #0000ff !important;
   --code-token-control: #af00db !important;
   --code-token-attribute-name: #ff0000 !important;
   --code-token-function-name: #795e26 !important;
   --code-token-class-name: #267f99 !important;
-  --code-token-attribute-value: #a31515 !important;
+  --code-token-string: #a31515 !important;
   --code-token-constant: #0070c1 !important;
   --code-token-number: #098658 !important;
   --code-token-regex: #811f3f !important;
@@ -127,12 +148,12 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --code-token-tag: #0000ff !important;
+    --code-token-keyword: #0000ff !important;
     --code-token-control: #af00db !important;
     --code-token-attribute-name: #ff0000 !important;
     --code-token-function-name: #795e26 !important;
     --code-token-class-name: #267f99 !important;
-    --code-token-attribute-value: #a31515 !important;
+    --code-token-string: #a31515 !important;
     --code-token-constant: #0070c1 !important;
     --code-token-number: #098658 !important;
     --code-token-regex: #811f3f !important;
