@@ -1,14 +1,23 @@
 {
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
   "name": "MDN VS-Code Theme",
   "description": "Styles MDN code blocks like the default vscode theme.",
   "version": "1.1",
   "icons": { "128": "icon.png" },
-  "manifest_version": 3,
   "content_scripts": [
     {
       "matches": ["*://*.mozilla.org/*", "https://interactive-examples.mdn.mozilla.net/*"],
       "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_end",
       "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["*://*.mozilla.org/*", "https://interactive-examples.mdn.mozilla.net/*"],
+      "resources": ["styles.css"]
     }
   ]
 }
